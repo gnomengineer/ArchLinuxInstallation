@@ -1,4 +1,5 @@
 consolekit
+dbus-core
 vim
 skype
 thunderbird
@@ -7,12 +8,12 @@ gnome-terminal
 chromium-browser
 pcmanfm
 irssi
-teeworlds
 gimp
 vlc
 openshot
 audacity
 moc
+pavucontrol
 flashplugin
 gpicview
 virtualbox
