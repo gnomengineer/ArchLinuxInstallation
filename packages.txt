@@ -17,3 +17,5 @@ pavucontrol
 flashplugin
 gpicview
 virtualbox
+wine
+qtorrent
