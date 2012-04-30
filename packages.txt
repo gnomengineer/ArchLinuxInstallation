@@ -18,4 +18,4 @@ flashplugin
 gpicview
 virtualbox
 wine
-qtorrent
+jre7-openjdk
