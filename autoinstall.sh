@@ -11,11 +11,7 @@ cd
 mkdir tmp/ && cd tmp/
 
 wget http://aur.archlinux.org/packages/te/teamspeak3/teamspeak3.tar.gz && tar -xzf teamspeak3.tar.gz
-wget https://aur.archlinux.org/packages/aw/awesome/awesome.tar.gz && tar -xzf awesome.tar.gz
-wget https://aur.archlinux.org/packages/ca/cairo-xcb/cairo-xcb.tar.gz && tar -xzf cairo-xcb.tar.gz
 
-cd cairo-xcb && makepkg -s && sudo pacman -U --noconfirm *.xz
-cd ../awesome && makepkg -s && sudo pacman -U --noconfirm awesome-3.4.11-2-x86_64.pkg.tar.xz
 cd ../teamspeak3 && makepkg -s && sudo pacman -U --noconfirm *.xz
 
 cd && echo "AUR packages successful installed"
