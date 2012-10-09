@@ -1,0 +1,29 @@
+## additional application
+gpicview
+xpdf
+icedtea-web-jre7
+flashplugin
+pavucontrol
+lxterminal
+awesome
+vicious
+pcmanfm
+consolekit
+dbus-core
+## software engineering
+vim
+gedit
+jre7-openjdk
+## entertainment
+gimp
+wine
+moc
+vlc
+## internet application
+chromium
+thunderbird
+deluge
+## comunication
+irssi
+skype
+teamspeak3
