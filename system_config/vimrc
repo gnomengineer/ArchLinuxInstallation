@@ -20,3 +20,5 @@ set number
 set tabstop=4
 set hlsearch
 set incsearch
+
+map <F9> :shell<CR>

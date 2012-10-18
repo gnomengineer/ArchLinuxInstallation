@@ -27,3 +27,4 @@ deluge
 irssi
 skype
 teamspeak3
+teamviewer

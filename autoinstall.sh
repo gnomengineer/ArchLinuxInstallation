@@ -1,37 +1,57 @@
 #!/bin/bash
-#
-#author: daniel föhn aka troopa (troopa.der.pate@gmail.com)
-#description: a little installation script for an ArchLinux system
-#             it installs packages and put the config files into the right place
-#date: 2012-03-31
 
-#make awesome and cairo-xcb packages from AUR in a temporary folder
-cd
+#author: troopa der pate
+#date: 2012-10-18
+#desc: simple script to download packages from a list. works only on ArchLinux
 
-mkdir tmp/ && cd tmp/
+failed=false
+#install yaourt so all programms can be installed either from AUR
+cd /tmp
+wget http://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz
+tar -xzf package-query.tar.gz
+wget http://aur.archlinux.org/packages/ya/yaourt/yaourt.tar.gz
+tar -xzf yaourt.tar.gz
+if test -d /tmp/package-query
+then
+	cd package-query/
+	sudo pacman -S yajl --noconfirm
+	makepkg
+	sudo pacman -U *.xz --noconfirm
+else
+	echo "/tmp/package-query could not be created"
+fi
 
-wget http://aur.archlinux.org/packages/te/teamspeak3/teamspeak3.tar.gz && tar -xzf teamspeak3.tar.gz
+if test -d /tmp/yaourt
+then
+	cd /tmp/yaourt/
+	makepkg
+	sudo pacman -U *.xz --noconfirm 
+else
+	echo "/tmp/yaourt could not be created"
+fi
 
-cd ../teamspeak3 && makepkg -s && sudo pacman -U --noconfirm *.xz
-
-cd && echo "AUR packages successful installed"
-
-#remove tmp/ folder and create .xinitrc
-rm -r tmp/
-echo "#!/bin/bash" > ~/.xinitrc
-echo "exec ck-launch-session dbus-launch awesome" >> ~/.xinitrc
-echo ".xinitrc successful created"
-
-#install all packages which are determined for this system
-while read package
+#intall all packages with yaourt
+while read zeile
 do
-set $package
-    packages="$packages $package"
-done < ~/install/packages.txt
-#sudo pacman -S $packages
-sudo pacman -S --noconfirm $packages
-echo "packages successful installed"
+set $zeile
+	if [ echo $zeile | egrep ^# ]
+	then
+		echo "\n"
+	else
+		yaourt -S $zeile
+		if [ $zeile -ne 0 ]: then
+			echo "$zeile was not installed correctly"
+			failed=true
+		else
+			echo "$zeile was correctly installed"
+		fi
+	fi
+done < $1
 
-#copy all config to the system
-echo "configurationfiles successful copied"
+#check the status of the installation and print a message when an error occured
+if [ failed ]: then
+	echo "the installation ends in an error, please see the output for further information"
+fi
 
+echo "clean up the installation"
+sudo pacman -R yaourt package-query yajl
