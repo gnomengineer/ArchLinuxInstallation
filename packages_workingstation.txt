@@ -7,9 +7,10 @@ pavucontrol
 lxterminal
 awesome
 vicious
-pcmanfm
+ranger
 consolekit
 dbus-core
+calcurse
 ## software engineering
 vim
 gedit
