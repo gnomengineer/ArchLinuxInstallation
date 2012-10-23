@@ -11,10 +11,15 @@ ranger
 consolekit
 dbus-core
 calcurse
+slim
+openssh
+cdrkit
 ## software engineering
 vim
 gedit
 jre7-openjdk
+gcc
+c++
 ## entertainment
 gimp
 wine
@@ -27,5 +32,4 @@ deluge
 ## comunication
 irssi
 skype
-teamspeak3
 teamviewer
