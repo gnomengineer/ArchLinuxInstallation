@@ -1,6 +1,6 @@
 ## additional application
-gpicview
-xpdf
+feh
+apvlv
 icedtea-web-jre7
 flashplugin
 pavucontrol
@@ -24,7 +24,8 @@ c++
 gimp
 wine
 moc
-vlc
+mplayer2
+smplayer
 ## internet application
 chromium
 thunderbird
