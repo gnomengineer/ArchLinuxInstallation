@@ -1,0 +1,7 @@
+## additional application
+wine
+consolekit
+dbus-core
+vim
+lxterminal
+jre7

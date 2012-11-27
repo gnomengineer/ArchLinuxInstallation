@@ -1,0 +1,8 @@
+## additional application
+consolekit
+dbus-core
+## software engineering
+vim
+jre7-openjdk
+cpp
+## white hat
