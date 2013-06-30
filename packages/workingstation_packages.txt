@@ -10,7 +10,8 @@ vicious
 ranger
 consolekit
 dbus-core
-calcurse
+tudu
+when
 slim
 openssh
 cdrkit
@@ -34,3 +35,4 @@ deluge
 irssi
 skype
 teamviewer
+mumble
