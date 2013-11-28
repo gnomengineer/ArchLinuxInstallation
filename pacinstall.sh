@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #author: Daniel Föhn aka (Don) Troopa
-#date: 2013-11-26
+#date: 2013-11-28
 #desc: a script that installs package from a given list.
 #call:	pacinstall package_list.txt 
 
@@ -69,11 +69,11 @@ then
 	while read zeile
 	do
 	set $zeile
-			#TODO true when not begin with #
-			if [ $(echo $zeile | egrep ^#) ]
+			if [ $(echo $zeile | cut -c 1) != "#" ]
 			then
 					yaourt -S $zeile --noconfirm
-					if [ pacman -Qkq $zeile == "" ]
+					package=$(pacman -Qq $zeile)
+					if [ $package == "" ]
 					then
 							echo "[WW] $zeile was not installed correctly" >> $logfile
 							success=false;
@@ -93,7 +93,6 @@ then
 		echo "cleaning up the installation"
 		sleep 2
         sudo pacman -R yaourt package-query yajl
-		#TODO check for deleting like this
         rm -r /tmp/{yaourt,package-query}
 		echo "installation cleaned up"
 else
