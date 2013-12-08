@@ -23,7 +23,7 @@ icedtea-web-jre7
 flashplugin
 chromium
 thunderbird
-deluge
+transmission-qt
 #development
 vim
 jdk7-openjdk
