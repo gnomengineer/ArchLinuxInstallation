@@ -1,0 +1,15 @@
+#!/bin/bash
+#systemwide
+awesome
+chromium
+mypaint
+irssi
+scrot
+#viewers
+feh
+evince
+#IDE
+eclipse
+vim
+jdk7-openjdk
+gcc
