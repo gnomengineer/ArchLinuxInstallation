@@ -18,9 +18,10 @@ runtime! archlinux.vim
 syntax on
 set number
 set tabstop=4
+set expandtab
+set sts=4
 set hlsearch
 set incsearch
 
 map <F9> :shell<CR>
 map <C-F> :NERDTreeToggle<Enter>
-map <F8> :ConqueTerm bash<Enter>
