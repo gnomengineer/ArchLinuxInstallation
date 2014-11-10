@@ -33,7 +33,7 @@ depending on your hardware you can add the packages of your
 graphic card to the package list.  
 if you use NVIDIA the following command generates a basic xorg.conf  
 
-`# nvidia-xconfig
+`# nvidia-xconfig`
 
 for ATI/AMD graphic card drivers you can use this command to generate an xorg.conf  
 
