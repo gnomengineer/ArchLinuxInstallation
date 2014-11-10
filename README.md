@@ -62,5 +62,6 @@ the user is created with this command
 #### PULSEAUDIO
 
 in order to use the package "pavucontrol" you need to start the pulseaudio server. If it does not start automatically insert
-`pulseaudio --start` (without " ) into your ~/.xinitrc file before your window manager command
+`pulseaudio --start` into your ~/.xinitrc file before your window manager command
+
 *Note: If you plan to use moc as your music player I do not recommend using pulseaudio!*
