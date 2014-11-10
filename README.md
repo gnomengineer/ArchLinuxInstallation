@@ -1,4 +1,4 @@
-# PRE-REQUIREMENTS
+## PRE-REQUIREMENTS
 
 for using the script included in this package
 you must enable required repositories in your
@@ -9,7 +9,7 @@ recommended.
 *NOTE: this script is not intended for root user. execute it with a regular user*
 
 ----------------------------------------------------------------------------------
-# USAGE
+## USAGE
 
 the use of the script is structured like
 	
@@ -24,10 +24,10 @@ written, inclusive all error messages.
 *NOTE: the log file should be checked in any case*
 
 ----------------------------------------------------------------------------------
-# POST-CONFIGURATION
+## POST-CONFIGURATION
 
 
-## GRAPHIC CARD
+#### GRAPHIC CARD
 
 depending on your hardware you can add the packages of your  
 graphic card to the package list.  
@@ -40,7 +40,7 @@ for ATI/AMD graphic card drivers you can use this command to generate an xorg.co
 `# Xorg -configure`
 
 
-## USER CREATION
+#### USER CREATION
 
 useful groups for a "local admin" user like a regular windows user with additional rights
 
@@ -59,7 +59,7 @@ the user is created with this command
 `# useradd -m -G users,audio,video,wheel,storage,optical,power,network,log -s /bin/bash <username>`
 
 
-## PULSEAUDIO
+#### PULSEAUDIO
 
 in order to use the package "pavucontrol" you need to start the pulseaudio server. If it does not start automatically insert
 `pulseaudio --start` (without " ) into your ~/.xinitrc file before your window manager command
