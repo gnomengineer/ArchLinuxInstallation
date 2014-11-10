@@ -1,9 +1,8 @@
 #!/bin/bash
 #general
 feh
-apvlv
+evince
 gedit
-ranger
 tudu
 when
 awesome
@@ -11,7 +10,6 @@ vicious
 slim
 openssh
 lxterminal
-pavucontrol
 cdrkit
 dialog
 alsa-oss
@@ -22,16 +20,16 @@ scrot
 icedtea-web-jre7
 flashplugin
 chromium
-thunderbird
 transmission-qt
+geary
 #development
 vim
 jdk7-openjdk
 gcc
-eclipse
+sage-mathematics
 #video, sound and picture design
 gimp
-pencil-svn
+mypaint
 moc
 mplayer2
 smplayer
@@ -41,3 +39,4 @@ audacity
 irssi
 skype
 teamspeak3
+mumble
