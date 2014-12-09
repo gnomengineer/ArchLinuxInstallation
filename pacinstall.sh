@@ -21,6 +21,7 @@ echo ""
 echo "start installing programs ..."
 sleep 2
 #install yaourt so all programms can be installed either from AUR
+sudo pacman -S wget --noconfirm
 mkdir ~/temp
 cd ~/temp
 wget http://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz
