@@ -4,7 +4,7 @@
 after you have installed your basic ArchLinux system you might want to create your
 network access. If you get in some trouble copy the following command to your root shell
 
-`# systemctl enable dhcpcd
+`# systemctl enable dhcpcd`
 
 and reboot your system.
 
@@ -13,11 +13,11 @@ and reboot your system.
 After you configured your internet connection it's time to get git and this repo. Type the following
 code into your shell
 
-`# pacman -S git
+`# pacman -S git`
 
 and execute this command after the successful installation of git
 
-`# git clone https://github.com/troopa/ArchLinuxInstallation.git
+`# git clone https://github.com/troopa/ArchLinuxInstallation.git`
 
 #### ENABLING REPOSITORIES
 
@@ -27,7 +27,7 @@ you must enable required repositories in your
 if you're using a 64-bit system the [multilib] repo is
 recommended. It is also needed for skype and icedtea-web  
 use this command to edit your pacman.conf
-`# vi /etc/pacman.conf
+`# vi /etc/pacman.conf`
 
 *NOTE: this script is not intended for root user. execute it with a regular user*
 
