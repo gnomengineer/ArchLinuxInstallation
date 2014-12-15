@@ -27,6 +27,7 @@ you must enable required repositories in your
 if you're using a 64-bit system the [multilib] repo is
 recommended. It is also needed for skype and icedtea-web  
 use this command to edit your pacman.conf
+
 `# vi /etc/pacman.conf`
 
 *NOTE: this script is not intended for root user. execute it with a regular user*
@@ -88,3 +89,26 @@ in order to use the package "pavucontrol" you need to start the pulseaudio serve
 `pulseaudio --start` into your ~/.xinitrc file before your window manager command
 
 *Note: If you plan to use moc as your music player I do not recommend using pulseaudio!*
+
+#### DISABLE BEEP ON CONSOLE
+
+maybe you have an annoying beep sound whenever you reach a the end of the console prompt.
+simply disable this with following command
+
+`rmmod pcspkr`
+
+to disable it even after reboot add the following line to your /etc/modprobe.d/blacklist
+
+`blacklist pcspkr`
+
+#### VUNDLE & SYSTEM CONFIG
+
+In the system_config folder are some configurations stored that can be copied into your home directory.  
+Use the `copy_system_configurations.sh` to copy all required configuration folder into your home.
+*Note: you have to be in the folder that contains the subfolder called 'system_config'*
+
+for using the vim plugins mentioned in the system_config/.vimrc a vim plugin manager called 'vundle' has to be installed  
+For this just execute the other script called 'install_vundle.sh' and it will create everything needed.  
+After the installation you have to execute the install command within vim.
+
+`:PluginInstall`
