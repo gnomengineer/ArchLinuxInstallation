@@ -14,6 +14,21 @@ runtime! archlinux.vim
 " If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
 " Or better yet, read /usr/share/vim/vim72/vimrc_example.vim or the vim manual
 " and configure vim to your own liking!
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'clang-complete'
+Plugin 'javacomplete'
+Plugin 'The-NERD-tree'
+Plugin 'supertab'
+Plugin 'tabular'
+call vundle#end()
+filetype plugin indent on
 
 syntax on
 set number
