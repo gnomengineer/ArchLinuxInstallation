@@ -13,3 +13,15 @@ eclipse
 vim
 jdk7-openjdk
 gcc
+gedit
+vicious
+openssh
+lxterminal
+alsa-oss
+alsa-firmware
+alsa-utils
+libreoffice
+flashplugin
+firefox
+sage-mathematics
+audacity
