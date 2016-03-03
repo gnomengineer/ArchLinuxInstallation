@@ -22,7 +22,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'clang-complete'
 Plugin 'javacomplete'
 Plugin 'The-NERD-tree'
 Plugin 'supertab'
@@ -34,9 +33,11 @@ syntax on
 set number
 set tabstop=4
 set expandtab
+set shiftwidth=4
 set sts=4
 set hlsearch
 set incsearch
 
 map <F9> :shell<CR>
 map <C-F> :NERDTreeToggle<Enter>
+map <F6> :! grep -rn "@TODO"
